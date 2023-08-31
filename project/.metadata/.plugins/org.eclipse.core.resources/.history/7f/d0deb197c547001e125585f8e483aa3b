@@ -1,0 +1,37 @@
+package ch02_pjt_01;
+
+import java.util.Scanner;
+
+public class MyCalculator {
+	//인터페이스로 바꿔봅시다.
+	public void calculate(int fNum, int sNum, ICalculator calculator) {	
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자를 입력해주세요 : ");
+		fNum = sc.nextInt();
+		System.out.print("숫자를 입력해주세요 : ");
+		sNum = sc.nextInt();
+		
+		int value = calculator.doOperation(fNum, sNum);
+		System.out.println("result : " + value);
+	}
+	//생성자가 다 사라졌죠? => MainClass에 생성자를 매개변수로 넣습니다.
+//	public void calAdd(int fNum, int sNum, CalAdd calAdd) {	
+//		int value = calAdd.doOperation(fNum, sNum);
+//		System.out.println("result : " + value);
+//	}
+	
+//	public void calSub(int fNum, int sNum, CalSub calSub) {
+//		int value = calSub.doOperation(fNum, sNum);
+//		System.out.println("result : " + value);
+//	}
+//	public void calMul(int fNum, int sNum, CalMul calMul) {
+//		int value = calMul.doOperation(fNum, sNum);
+//		System.out.println("result : " + value);
+//	}
+//	public void calDiv(int fNum, int sNum, CalDiv calDiv) {
+//
+//		int value = calDiv.doOperation(fNum, sNum);
+//		System.out.println("result : " + value);
+//	}
+}

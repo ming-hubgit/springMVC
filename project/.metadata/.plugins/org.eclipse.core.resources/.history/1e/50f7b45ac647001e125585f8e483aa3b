@@ -1,0 +1,39 @@
+package ch02_pjt_01;
+
+import java.util.Scanner;
+
+public class CalAssembler {
+	
+	MyCalculator calculator;
+	CalAdd calAdd;
+	CalSub calSub;
+	CalMul calMul;
+	CalDiv calDiv;
+	CalMod calMod;
+	
+	public CalAssembler() {
+		calculator = new MyCalculator();
+		calAdd = new CalAdd();
+		calSub = new CalSub();
+		calMul = new CalMul();
+		calDiv = new CalDiv();
+		calMod = new CalMod();
+		
+		assemble();
+	}
+	
+	public void assemble() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자를 입력해주세요 : ");
+		int num1 = sc.nextInt();
+		System.out.print("숫자를 입력해주세요 : ");
+		int num2 = sc.nextInt();
+		
+		calculator.calculate(num1, num2, calAdd);
+		calculator.calculate(num1, num2, calSub);
+		calculator.calculate(num1, num2, calMul);
+		calculator.calculate(num1, num2, calDiv);
+		calculator.calculate(num1, num2, calMod);
+	}
+}

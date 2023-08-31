@@ -1,0 +1,8 @@
+package ch02_pjt_01;
+
+public class CalSub {
+	@Override
+	public int doOPeration(int firstNum, int secondNum) {
+		return firstNum - secondNum;
+	}
+}
