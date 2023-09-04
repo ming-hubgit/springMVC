@@ -4,4 +4,17 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="ch04_pjt_01.ems.member.dao.StudentDAO"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ch04_pjt_01.ems.member.service.PrintStudentInformationService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_01.ems.member.service.StudentDeleteService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_01.ems.member.service.EMSInformationService"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.member.dao.MemberDAO"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.Member"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.utils.InitSampleData"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberRegisterService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.PrintMemberInformationService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberDeleteService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberModifyService"/>
+    <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberSelectService"/>
 </qualifiedTypeNameHistroy>

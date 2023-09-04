@@ -6,14 +6,14 @@ import java.util.Set;
 
 import ch04_pjt_01.ems.member.Student;
 
-public class PrintStudentInfomationService {
+public class PrintStudentInformationService {
 	StudentAllSelectService allSelectService;
 	
-	public void PrintStudentInformationService(StudentAllSelectService allSelectService) {
+	public PrintStudentInformationService(StudentAllSelectService allSelectService) {
 		this.allSelectService = allSelectService;
 	}
 	
-	public void printStudentInfo() {
+	public void printStudentsInfo() {
 		Map<String, Student> allStudent = allSelectService.allSelect();
 		Set<String> keys = allStudent.keySet();
 		//Iterator => Map에 저장된 것을 HastSet key를 뽑아서 HashSet에 있는 것을 하나씩 가져오는 객체

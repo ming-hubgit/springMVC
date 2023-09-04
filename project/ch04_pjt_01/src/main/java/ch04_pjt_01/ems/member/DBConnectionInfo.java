@@ -23,7 +23,4 @@ public class DBConnectionInfo {
 	public void setUserPw(String userPw) {
 		this.userPw = userPw;
 	}
-	
-	
-
 }

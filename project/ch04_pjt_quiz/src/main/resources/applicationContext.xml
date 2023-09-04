@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="initSampleData"
+			class="ch04_pjt_quiz.ems.utils.InitSampleData">
+			<property name="mNums">
+				<array>
+					<value>m001</value>
+					<value>m002</value>
+					<value>m003</value>
+					<value>m004</value>
+					<value>m005</value>
+				</array>
+			</property>
+			<property name="mIds">
+				<array>
+					<value>rabbit</value>
+					<value>hippo</value>
+					<value>raccoon</value>
+					<value>elephant</value>
+					<value>lion</value>
+				</array>
+			</property>
+			<property name="mPws">
+				<array>
+					<value>agatha</value>
+					<value>barbara</value>
+					<value>chris</value>
+					<value>doris</value>
+					<value>elva</value>
+				</array>
+			</property>
+			<property name="mHPs">
+				<array>
+					<value>010-0000-0000</value>
+					<value>010-1111-1111</value>
+					<value>010-1111-2222</value>
+					<value>010-0000-1111</value>
+					<value>010-1111-0000</value>
+				</array>
+			</property>
+			<property name="mEmails">
+				<array>
+					<value>aa@gmail.com</value>
+					<value>bb@gmail.com</value>
+					<value>cc@gmail.com</value>
+					<value>dd@gmail.com</value>
+					<value>ff@gmail.com</value>
+				</array>
+			</property>
+		</bean>
+	<bean id="memberDAO"
+		class="ch04_pjt_quiz.ems.member.dao.MemberDAO"/>
+		
+	<bean id="memberRegisterService"
+		class="ch04_pjt_quiz.ems.member.service.MemberRegisterService">
+		<constructor-arg ref="memberDAO" />
+		</bean>
+	<bean id="memberModifyService"
+		class="ch04_pjt_quiz.ems.member.service.MemberModifyService">
+		<constructor-arg ref="memberDAO" />
+		</bean>
+	<bean id="memberDeleteService"
+		class="ch04_pjt_quiz.ems.member.service.MemberDeleteService">
+		<constructor-arg ref="memberDAO" />
+		</bean>
+	<bean id="memberSelectService"
+		class="ch04_pjt_quiz.ems.member.service.MemberSelectService">
+		<constructor-arg ref="memberDAO" />
+		</bean>
+	<bean id="memberAllSelectService"
+		class="ch04_pjt_quiz.ems.member.service.MemberAllSelectService">
+		<constructor-arg ref="memberDAO" />
+		</bean>
+	<bean id="printMemberInformationService"
+		class="ch04_pjt_quiz.ems.member.service.PrintMemberInformationService">
+		<constructor-arg ref="memberAllSelectService" />
+		</bean>
+</beans>
