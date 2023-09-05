@@ -1,15 +1,14 @@
 package ch04_pjt_quiz.ems.utils;
 
-import java.util.Date;
-
 public class InitSampleData {
 	private String[] mNums;//회원 번호 key 값
 	private String[] mIds;//회원 아이디
 	private String[] mPws;//회원 비밀번호
 	private String[] mHPs;//회원 연락처
 	private String[] mEmails;//회원 이메일
-	private Date[] newDates; //신규 회원가입일
-	private Date[] upDates; //마지막 회원 정보 수정일
+	private String[] newDates; //신규 회원가입일
+	private String[] upDates; //마지막 회원 정보 수정일
+	
 	public String[] getmNums() {
 		return mNums;
 	}
@@ -40,16 +39,16 @@ public class InitSampleData {
 	public void setmEmails(String[] mEmails) {
 		this.mEmails = mEmails;
 	}
-	public Date[] getNewDates() {
+	public String[] getNewDates() {
 		return newDates;
 	}
-	public void setNewDates(Date[] newDates) {
+	public void setNewDates(String[] newDates) {
 		this.newDates = newDates;
 	}
-	public Date[] getUpDates() {
+	public String[] getUpDates() {
 		return upDates;
 	}
-	public void setUpDates(Date[] upDates) {
+	public void setUpDates(String[] upDates) {
 		this.upDates = upDates;
 	}
 	

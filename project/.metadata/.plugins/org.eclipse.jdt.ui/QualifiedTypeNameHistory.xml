@@ -17,4 +17,7 @@
     <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberDeleteService"/>
     <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberModifyService"/>
     <fullyQualifiedTypeName name="ch04_pjt_quiz.ems.service.MemberSelectService"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>

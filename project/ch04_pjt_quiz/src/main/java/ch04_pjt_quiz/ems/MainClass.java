@@ -1,19 +1,22 @@
 package ch04_pjt_quiz.ems;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
-import ch04_pjt_quiz.ems.Member;
-import ch04_pjt_quiz.ems.service.MemberDeleteService;
-import ch04_pjt_quiz.ems.service.MemberModifyService;
-import ch04_pjt_quiz.ems.service.MemberRegisterService;
-import ch04_pjt_quiz.ems.service.MemberSelectService;
-import ch04_pjt_quiz.ems.service.PrintMemberInformationService;
+
+import ch04_pjt_quiz.ems.member.Member;
+import ch04_pjt_quiz.ems.member.service.MemberDeleteService;
+import ch04_pjt_quiz.ems.member.service.MemberModifyService;
+import ch04_pjt_quiz.ems.member.service.MemberRegisterService;
+import ch04_pjt_quiz.ems.member.service.MemberSelectService;
+import ch04_pjt_quiz.ems.member.service.PrintMemberInformationService;
 import ch04_pjt_quiz.ems.utils.InitSampleData;
 
 public class MainClass {
 
 	public static void main(String[] args) {
+		LocalDate now = LocalDate.now();
 		//IoC컨테이너 생성
 		GenericXmlApplicationContext ctx =
 				new GenericXmlApplicationContext("applicationContext.xml");
@@ -24,8 +27,8 @@ public class MainClass {
 		String[] mPws = initSampleData.getmPws();
 		String[] mHPs = initSampleData.getmHPs();
 		String[] mEmails = initSampleData.getmEmails();
-		Date[] newDates = initSampleData.getNewDates();
-		Date[] upDates = initSampleData.getUpDates();
+		String[] newDates = initSampleData.getNewDates();
+		String[] upDates = initSampleData.getUpDates();
 		
 		//데이터베이스에 샘플 데이터 등록
 		MemberRegisterService registerService =
@@ -40,7 +43,7 @@ public class MainClass {
 		printMemberInformationService.printMembersInfo();
 		//회원 등록
 		registerService = ctx.getBean("membertRegisterService", MemberRegisterService.class);
-		registerService.register(new Member("m006", "deer", "p0006", "010-1234-1234", "gg@gmail.com", new Date(), new Date()));
+		registerService.register(new Member("m006", "deer", "p0006", "010-1234-1234", "gg@gmail.com", now.toString(), now.toString()));
 		
 		printMemberInformationService.printMembersInfo();
 		
@@ -62,7 +65,7 @@ public class MainClass {
 		//회원 수정
 		MemberModifyService modifyService = 
 				ctx.getBean("memberModifyService", MemberModifyService.class);
-		modifyService.modify(new Member("m006", "deer1", "p0006", "010-1234-1234", "hh@gmail.com", new Date(), new Date()));
+		modifyService.modify(new Member("m006", "deer1", "p0006", "010-1234-1234", "hh@gmail.com",now.toString() ,now.toString()));
 		//회원 리스트
 		printMemberInformationService.printMembersInfo();
 		
