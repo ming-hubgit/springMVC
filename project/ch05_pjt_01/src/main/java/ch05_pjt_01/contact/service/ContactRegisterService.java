@@ -7,6 +7,7 @@ public class ContactRegisterService {
 	private ContactDAO contactDao;
 	
 	public ContactRegisterService(ContactDAO contactDao) {
+		System.out.println("contactDAO : " + contactDao); //contactDAO출력
 		this.contactDao = contactDao;
 	}
 	

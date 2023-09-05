@@ -3,8 +3,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+    xmlns:context="http://www.springframework.org/schema/context">
 
+	<context:annotation-config />
+	
 	<bean id="initSampleData" class="ch05_pjt_01.contact.utils.InitSampleData">
 		<property name="names">
 			<array>
@@ -22,10 +27,6 @@
 		</property>
 	</bean>  
 	<bean id="contactDao" class="ch05_pjt_01.contact.dao.ContactDAO" />
-	<bean id="registerService" class="ch05_pjt_01.contact.service.ContactRegisterService">
-		<constructor-arg ref="contactDao" />
-	</bean>
-	<bean id="searchService" class="ch05_pjt_01.contact.service.ContactSearchService">
-		<constructor-arg ref="contactDao" />
-	</bean>
+	<bean id="registerService" class="ch05_pjt_01.contact.service.ContactRegisterService" />
+	<bean id="searchService" class="ch05_pjt_01.contact.service.ContactSearchService" />
 </beans>
