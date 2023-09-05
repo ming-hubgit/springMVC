@@ -13,6 +13,9 @@ public class MainClass {
 		GenericXmlApplicationContext ctx =
 				new GenericXmlApplicationContext("classpath:appCtx.xml");
 		
+		AutoWiredEx autowiredEx = ctx.getBean("autowiredEx", AutoWiredEx.class);
+//		autowiredEx.autoWiredMethod(null, null);
+		
 		//샘플 데이터
 		InitSampleData initSampleData =
 				ctx.getBean("initSampleData", InitSampleData.class);

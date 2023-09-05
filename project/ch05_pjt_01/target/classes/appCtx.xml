@@ -26,7 +26,28 @@
 			</array>
 		</property>
 	</bean>  
-	<bean id="contactDao" class="ch05_pjt_01.contact.dao.ContactDAO" />
+	<bean id="contactDAO" class="ch05_pjt_01.contact.dao.ContactDAO"/>
+	<!-- <qualifier value="usedDAO" /> -->
+	<bean id="contactDao2" class="ch05_pjt_01.contact.dao.ContactDAO" />
+	<bean id="contactDao3" class="ch05_pjt_01.contact.dao.ContactDAO" />
 	<bean id="registerService" class="ch05_pjt_01.contact.service.ContactRegisterService" />
 	<bean id="searchService" class="ch05_pjt_01.contact.service.ContactSearchService" />
+	<bean id="firstBean1" class="ch05_pjt_01.contact.FirstBean">
+		<qualifier value="usedBean" />
+	</bean>
+	<bean id="firstBean2" class="ch05_pjt_01.contact.FirstBean" />
+	<bean id="firstBean3" class="ch05_pjt_01.contact.FirstBean" />
+	
+	<bean id="secondBean" class="ch05_pjt_01.contact.SecondBean" />
+	
+	<bean id="thirdBean" class="ch05_pjt_01.contact.ThirdBean" />
+	
+	<bean id="fourthBean1" class="ch05_pjt_01.contact.FourthBean">
+		<qualifier value="usedBean" />
+	</bean>
+	<bean id="fourthBean2" class="ch05_pjt_01.contact.FourthBean" />
+	<bean id="fourthBean3" class="ch05_pjt_01.contact.FourthBean" />
+	
+	<bean id="autowiredEx" class="ch05_pjt_01.contact.AutoWiredEx" />
+	
 </beans>
