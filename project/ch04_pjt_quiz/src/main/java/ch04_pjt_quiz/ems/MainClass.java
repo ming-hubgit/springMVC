@@ -1,7 +1,6 @@
 package ch04_pjt_quiz.ems;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
