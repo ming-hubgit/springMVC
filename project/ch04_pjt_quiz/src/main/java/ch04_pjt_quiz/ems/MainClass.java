@@ -41,7 +41,7 @@ public class MainClass {
 				ctx.getBean("printMemberInformationService", PrintMemberInformationService.class);
 		printMemberInformationService.printMembersInfo();
 		//회원 등록
-		registerService = ctx.getBean("membertRegisterService", MemberRegisterService.class);
+		registerService = ctx.getBean("memberRegisterService", MemberRegisterService.class);
 		registerService.register(new Member("m006", "deer", "p0006", "010-1234-1234", "gg@gmail.com", now.toString(), now.toString()));
 		
 		printMemberInformationService.printMembersInfo();
@@ -51,7 +51,7 @@ public class MainClass {
 				ctx.getBean("memberSelectService", MemberSelectService.class);
 		Member selectStudent = selectService.select("hbs006");
 		
-		System.out.println("STUDENT START ===========");
+		System.out.println("MEMBER START ===========");
 		System.out.println("|mNum : " + selectStudent.getmNum() + "\t");
 		System.out.println("|mId : " + selectStudent.getmId() + "\t");
 		System.out.println("|mPw : " + selectStudent.getmPw() + "\t");

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="memberDAO"
+			class="ch06_pjt_quiz.dao.MemberDAO" />
+			
+		<bean id="memberViewer"
+			class="ch06_pjt_quiz.view.MemberViewer" />
+			
+		<bean id="memberController"
+			class="ch06_pjt_quiz.controller.MemberController">
+			<constructor-arg ref="memberDAO" />
+			<constructor-arg ref="memberViewer" />
+		</bean>
+		
+		<bean id="initSampleData"
+			class="ch06_pjt_quiz.utils.InitSampleData">
+			<property name= "ids">
+				<array>
+					<value>rabbit</value>
+					<value>hippo</value>
+					<value>raccoon</value>
+					<value>elephant</value>
+					<value>lion</value>
+				</array>
+			</property>
+			<property name= "passwords">
+				<array>
+					<value>p0001</value>
+					<value>p0002</value>
+					<value>p0003</value>
+					<value>p0004</value>
+					<value>p0005</value>
+				</array>
+			</property>
+			<property name= "contacts">
+				<array>
+					<value>010-0000-0000</value>
+					<value>010-1111-1111</value>
+					<value>010-1111-2222</value>
+					<value>010-0000-1111</value>
+					<value>010-1111-0000</value>
+				</array>
+			</property>
+			<property name= "emails">
+				<array>
+					<value>aa@gmail.com</value>
+					<value>bb@gmail.com</value>
+					<value>cc@gmail.com</value>
+					<value>dd@gmail.com</value>
+					<value>ff@gmail.com</value>
+				</array>
+			</property>
+			<property name= "registeredDates">
+				<array>
+					<value>"2020-02-03"</value>
+					<value>"2020-03-07"</value>
+					<value>"2020-04-08"</value>
+					<value>"2020-05-07"</value>
+					<value>"2020-06-24"</value>
+				</array>
+			</property>
+			<property name= "modifiedDates">
+				<array>
+					<value>"2020-02-20"</value>
+					<value>"2020-03-12"</value>
+					<value>"2020-04-21"</value>
+					<value>"2020-05-28"</value>
+					<value>"2020-07-08"</value>
+				</array>
+			</property>
+		</bean>
+			
+</beans>
